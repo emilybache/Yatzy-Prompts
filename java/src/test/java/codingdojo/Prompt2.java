@@ -7,6 +7,11 @@ import java.util.Arrays;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Prompt2 {
+    @Test
+    void yatzy_scores_when_all_dice_the_same() {
+        assertEquals(0, Yatzi.yatzy(1,2,4,5,6));
+        assertEquals(50, Yatzi.yatzy(5,5,5,5,5));
+    }
 
     static class Yatzi {
 
@@ -15,9 +20,4 @@ public class Prompt2 {
         }
     }
 
-    @Test
-    void yatzy_scores_when_all_dice_the_same() {
-        assertEquals(0, Yatzi.yatzy(1,2,4,5,6));
-        assertEquals(50, Yatzi.yatzy(5,5,5,5,5));
-    }
 }
