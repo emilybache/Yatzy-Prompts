@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace Yatzy_Prompts;
 
 // no need to create this prompt class in your solution
