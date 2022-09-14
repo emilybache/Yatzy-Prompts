@@ -1,4 +1,4 @@
-using Xunit;
+using NUnit.Framework;
 
 namespace Yatzy_Prompts;
 
@@ -6,10 +6,10 @@ namespace Yatzy_Prompts;
 public class Prompt1
 {
     // this test case should go in a class called YatzyScorerTest
-    [Fact]
+    [Test]
     public void Chance_scores_sum_of_all_dice()
     {
-        Assert.Equal(16, YatzyScorer.Chance(3, 3, 4, 5, 1));
+        Assert.AreEqual(16, YatzyScorer.Chance(3, 3, 4, 5, 1));
     }
     
 }

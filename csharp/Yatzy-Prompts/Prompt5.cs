@@ -1,4 +1,4 @@
-using Xunit;
+using NUnit.Framework;
 
 namespace Yatzy_Prompts;
 
@@ -6,16 +6,16 @@ namespace Yatzy_Prompts;
 public class Prompt5
 {
     // this test case should be added to YatzyScorerTest
-    [Fact]
+    [Test]
     public void DiceFrequencies_stores_how_many_of_each_dice_number_is_present()
     {
-        Assert.Equal(new Dictionary<int, int>()
+        Assert.AreEqual(new Dictionary<int, int>()
             {
                 { 1, 0 }, { 2, 5 }, { 3, 0 }, { 4, 0 }, { 5, 0 }, { 6, 0 }
             }, 
             YatzyScorer.DiceFrequencies(2,2,2,2,2));        
         
-        Assert.Equal(new Dictionary<int, int>()
+        Assert.AreEqual(new Dictionary<int, int>()
             {
                 { 1, 1 }, { 2, 1 }, { 3, 1 }, { 4, 1 }, { 5, 1 }, { 6, 0 }
             }, 
