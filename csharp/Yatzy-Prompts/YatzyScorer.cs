@@ -1,5 +1,7 @@
 ﻿namespace Yatzy_Prompts;
 
+using System.Linq;
+
 public class YatzyScorer
 {
     public static int MIN_DICE_VALUE = 1;
@@ -26,9 +28,14 @@ public class YatzyScorer
         var diceFrequencies = new Dictionary<int, int>();
         for (int i = MIN_DICE_VALUE; i <= MAX_DICE_VALUE; i++)
         {
-            diceFrequencies.Add(i, dice.Count(d => d == i));
+            diceFrequencies.Add(i, DiceFrequency(i, dice));
         }
 
         return diceFrequencies;
+    }
+
+    public static int DiceFrequency(int number, params int[] dice)
+    {
+        return dice.Count(d => d == number);
     }
 }

@@ -7,19 +7,8 @@ public class Prompt5
 {
     // this test case should be added to YatzyScorerTest
     [Test]
-    public void DiceFrequencies_stores_how_many_of_each_dice_number_is_present()
+    public void DiceFrequency_gives_how_many_of_a_particular_dice_number_is_present()
     {
-        Assert.AreEqual(new Dictionary<int, int>()
-            {
-                { 1, 0 }, { 2, 5 }, { 3, 0 }, { 4, 0 }, { 5, 0 }, { 6, 0 }
-            }, 
-            YatzyScorer.DiceFrequencies(2,2,2,2,2));        
-        
-        Assert.AreEqual(new Dictionary<int, int>()
-            {
-                { 1, 1 }, { 2, 1 }, { 3, 1 }, { 4, 1 }, { 5, 1 }, { 6, 0 }
-            }, 
-            YatzyScorer.DiceFrequencies(1,2,3,4,5));
-        
+        Assert.AreEqual(2, YatzyScorer.DiceFrequency(3, 1, 2, 3, 3, 5));
     }
 }
